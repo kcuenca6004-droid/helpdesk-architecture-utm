@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Listado de tickets - Help Desk">
+    <meta name="author" content="Estudiante">
+    <title>Tickets Registrados - Help Desk</title>
+</head>
+<body>
+    <!-- Encabezado del sitio -->
+    <header>
+        <h1>Sistema de Gestión de Incidentes</h1>
+        <p>Help Desk - Soporte Técnico</p>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar Incidente</a></li>
+            <li><a href="tickets.html">Ver Tickets</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección de filtros -->
+        <section id="filtros">
+            <h2>Filtrar Tickets</h2>
+            <article>
+                <form method="get" id="formulario-filtros">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado">
+                        <option value="">Todos</option>
+                        <option value="abierto">Abierto</option>
+                        <option value="progreso">En Progreso</option>
+                        <option value="resuelto">Resuelto</option>
+                    </select>
+
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="">Todas</option>
+                        <option value="red">Red</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                    </select>
+
+                    <button type="submit">Filtrar</button>
+                    <button type="reset">Limpiar Filtros</button>
+                </form>
+            </article>
+        </section>
+
+        <!-- Sección de listado de tickets -->
+        <section id="listado-tickets">
+            <h2>Tickets Registrados</h2>
+            <article>
+                <h3>Total de Tickets: 5</h3>
+                <p>Consulte el estado actual de todos los incidentes registrados en el sistema.</p>
+
+                <!-- Tabla de tickets -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Ticket</th>
+                            <th>Título</th>
+                            <th>Usuario</th>
+                            <th>Categoría</th>
+                            <th>Prioridad</th>
+                            <th>Estado</th>
+                            <th>Fecha Creación</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ticket 1 -->
+                        <tr>
+                            <td>TK-001</td>
+                            <td>Internet no funciona en oficina</td>
+                            <td>Juan Pérez</td>
+                            <td>Red</td>
+                            <td>Alta</td>
+                            <td>En Progreso</td>
+                            <td>2026-06-01</td>
+                            <td><a href="#ticket-001">Ver</a></td>
+                        </tr>
+
+                        <!-- Ticket 2 -->
+                        <tr>
+                            <td>TK-002</td>
+                            <td>Monitor dañado en puesto 3</td>
+                            <td>María García</td>
+                            <td>Hardware</td>
+                            <td>Media</td>
+                            <td>Abierto</td>
+                            <td>2026-06-02</td>
+                            <td><a href="#ticket-002">Ver</a></td>
+                        </tr>
+
+                        <!-- Ticket 3 -->
+                        <tr>
+                            <td>TK-003</td>
+                            <td>Error al instalar software de facturación</td>
+                            <td>Carlos López</td>
+                            <td>Software</td>
+                            <td>Alta</td>
+                            <td>En Progreso</td>
+                            <td>2026-05-30</td>
+                            <td><a href="#ticket-003">Ver</a></td>
+                        </tr>
+
+                        <!-- Ticket 4 -->
+                        <tr>
+                            <td>TK-004</td>
+                            <td>Contraseña olvidada - acceso bloqueado</td>
+                            <td>Ana Rodríguez</td>
+                            <td>Software</td>
+                            <td>Media</td>
+                            <td>Resuelto</td>
+                            <td>2026-05-28</td>
+                            <td><a href="#ticket-004">Ver</a></td>
+                        </tr>
+
+                        <!-- Ticket 5 -->
+                        <tr>
+                            <td>TK-005</td>
+                            <td>Impresora no imprime a color</td>
+                            <td>Roberto Martín</td>
+                            <td>Hardware</td>
+                            <td>Baja</td>
+                            <td>Abierto</td>
+                            <td>2026-06-03</td>
+                            <td><a href="#ticket-005">Ver</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Sección de detalles de tickets -->
+        <section id="detalles-tickets">
+            <h2>Detalles de Tickets</h2>
+
+            <!-- Detalle Ticket 1 -->
+            <article id="ticket-001">
+                <h3>Ticket TK-001: Internet no funciona en oficina</h3>
+                <dl>
+                    <dt>Usuario:</dt>
+                    <dd>Juan Pérez</dd>
+                    <dt>Categoría:</dt>
+                    <dd>Red</dd>
+                    <dt>Prioridad:</dt>
+                    <dd>Alta</dd>
+                    <dt>Estado:</dt>
+                    <dd>En Progreso</dd>
+                    <dt>Fecha Creación:</dt>
+                    <dd>2026-06-01 09:30 AM</dd>
+                    <dt>Descripción:</dt>
+                    <dd>El servicio de internet se ha interrumpido en toda la oficina principal. Los usuarios no pueden acceder a recursos en línea ni enviar correos electrónicos.</dd>
+                    <dt>Comentarios:</dt>
+                    <dd>Se está revisando la conexión con el proveedor de servicios.</dd>
+                </dl>
+                <p><a href="reportar.html">Volver a reportar</a></p>
+            </article>
+
+            <!-- Detalle Ticket 2 -->
+            <article id="ticket-002">
+                <h3>Ticket TK-002: Monitor dañado en puesto 3</h3>
+                <dl>
+                    <dt>Usuario:</dt>
+                    <dd>María García</dd>
+                    <dt>Categoría:</dt>
+                    <dd>Hardware</dd>
+                    <dt>Prioridad:</dt>
+                    <dd>Media</dd>
+                    <dt>Estado:</dt>
+                    <dd>Abierto</dd>
+                    <dt>Fecha Creación:</dt>
+                    <dd>2026-06-02 02:15 PM</dd>
+                    <dt>Descripción:</dt>
+                    <dd>El monitor del puesto de trabajo 3 presenta líneas verticales y fluctúa constantemente la imagen.</dd>
+                    <dt>Comentarios:</dt>
+                    <dd>Pendiente de revisión técnica.</dd>
+                </dl>
+                <p><a href="reportar.html">Volver a reportar</a></p>
+            </article>
+
+            <!-- Detalle Ticket 3 -->
+            <article id="ticket-003">
+                <h3>Ticket TK-003: Error al instalar software de facturación</h3>
+                <dl>
+                    <dt>Usuario:</dt>
+                    <dd>Carlos López</dd>
+                    <dt>Categoría:</dt>
+                    <dd>Software</dd>
+                    <dt>Prioridad:</dt>
+                    <dd>Alta</dd>
+                    <dt>Estado:</dt>
+                    <dd>En Progreso</dd>
+                    <dt>Fecha Creación:</dt>
+                    <dd>2026-05-30 11:00 AM</dd>
+                    <dt>Descripción:</dt>
+                    <dd>Al intentar instalar el nuevo software de facturación, el proceso se interrumpe con un código de error 0x80070005.</dd>
+                    <dt>Comentarios:</dt>
+                    <dd>Se está investigando problemas de permisos administrativos.</dd>
+                </dl>
+                <p><a href="reportar.html">Volver a reportar</a></p>
+            </article>
+
+            <!-- Detalle Ticket 4 -->
+            <article id="ticket-004">
+                <h3>Ticket TK-004: Contraseña olvidada - acceso bloqueado</h3>
+                <dl>
+                    <dt>Usuario:</dt>
+                    <dd>Ana Rodríguez</dd>
+                    <dt>Categoría:</dt>
+                    <dd>Software</dd>
+                    <dt>Prioridad:</dt>
+                    <dd>Media</dd>
+                    <dt>Estado:</dt>
+                    <dd>Resuelto</dd>
+                    <dt>Fecha Creación:</dt>
+                    <dd>2026-05-28 03:45 PM</dd>
+                    <dt>Descripción:</dt>
+                    <dd>Usuario no puede acceder al sistema debido a contraseña olvidada. Cuenta bloqueada después de 3 intentos fallidos.</dd>
+                    <dt>Comentarios:</dt>
+                    <dd>Contraseña restablecida exitosamente el 2026-05-28 04:20 PM.</dd>
+                </dl>
+                <p><a href="reportar.html">Volver a reportar</a></p>
+            </article>
+
+            <!-- Detalle Ticket 5 -->
+            <article id="ticket-005">
+                <h3>Ticket TK-005: Impresora no imprime a color</h3>
+                <dl>
+                    <dt>Usuario:</dt>
+                    <dd>Roberto Martín</dd>
+                    <dt>Categoría:</dt>
+                    <dd>Hardware</dd>
+                    <dt>Prioridad:</dt>
+                    <dd>Baja</dd>
+                    <dt>Estado:</dt>
+                    <dd>Abierto</dd>
+                    <dt>Fecha Creación:</dt>
+                    <dd>2026-06-03 10:15 AM</dd>
+                    <dt>Descripción:</dt>
+                    <dd>La impresora multifuncional no imprime en color, solo en escala de grises. Los cartuchos de color están llenos.</dd>
+                    <dt>Comentarios:</dt>
+                    <dd>Pendiente de diagnóstico técnico.</dd>
+                </dl>
+                <p><a href="reportar.html">Volver a reportar</a></p>
+            </article>
+
+        </section>
+
+        <!-- Sección de estadísticas -->
+        <section id="estadisticas">
+            <h2>Estadísticas de Tickets</h2>
+            <article>
+                <h3>Estado General del Sistema</h3>
+                <ul>
+                    <li>Total de Tickets: <strong>5</strong></li>
+                    <li>Abiertos: <strong>2</strong></li>
+                    <li>En Progreso: <strong>2</strong></li>
+                    <li>Resueltos: <strong>1</strong></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Por Categoría</h3>
+                <ul>
+                    <li>Red: <strong>1</strong></li>
+                    <li>Hardware: <strong>2</strong></li>
+                    <li>Software: <strong>2</strong></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Por Prioridad</h3>
+                <ul>
+                    <li>Alta: <strong>2</strong></li>
+                    <li>Media: <strong>2</strong></li>
+                    <li>Baja: <strong>1</strong></li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Sistema de Help Desk. Todos los derechos reservados.</p>
+        <p>Contacto: soporte@helpdesk.com | Teléfono: +593 9 1234 5678</p>
+        <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p>
+    </footer>
+</body>
+</html>
